@@ -1,5 +1,4 @@
  /* Copyright 2021 BarBell Boards
-  * Modification for VIA support and RGB underglow by Jens Bonk-Wiltfang
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
@@ -73,12 +72,13 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
     return rotation;
 }
 
-void oled_task_user(void) {
+bool oled_task_user(void) {
     if (is_keyboard_master()) {
         print_status_narrow();
     } else {
         render_logo();
     }
+    return false;
 }
 
 #endif

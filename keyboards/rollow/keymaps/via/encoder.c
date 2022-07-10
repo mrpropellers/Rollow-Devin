@@ -1,5 +1,4 @@
  /* Copyright 2021 BarBell Boards
-  * Modification for VIA support and RGB underglow by Jens Bonk-Wiltfang
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by

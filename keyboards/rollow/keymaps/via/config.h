@@ -1,5 +1,4 @@
- /* Copyright 2021 BarBell Boards
-  * Modification for VIA support and RGB underglow by Jens Bonk-Wiltfang
+ /* Copyright 2021 Barbell Boards
   * 
   * This program is free software: you can redistribute it and/or modify 
   * it under the terms of the GNU General Public License as published by 
@@ -16,6 +15,11 @@
   */ 
 
 #pragma once
+
+
+#define MASTER_LEFT
+// #define MASTER_RIGHT
+// #define EE_HANDS
 
 /* The way how "handedness" is decided (which half is which),
 see https://docs.qmk.fm/#/feature_split_keyboard?id=setting-handedness
