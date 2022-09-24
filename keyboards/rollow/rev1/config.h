@@ -1,8 +1,8 @@
 #pragma once
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0x0000 //TODO: Get a vendor ID
-#define PRODUCT_ID      0x0000 //TODO: Get a product ID
+#define VENDOR_ID       0x1332 //TODO: Get a vendor ID
+#define PRODUCT_ID      0x0001 //TODO: Get a product ID
 #define DEVICE_VER      0x0001 
 #define MANUFACTURER    BarbellBoards
 #define PRODUCT         Rollow
