@@ -210,19 +210,57 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef ENCODER_ENABLE
 
 bool encoder_update_user(uint8_t index, bool clockwise) {
-    if (index == 0) {
-        if (clockwise) {
-            tap_code(KC_UP);
-        } else {
-            tap_code(KC_DOWN);
-        }
-    } else if (index == 1) {
-        if (clockwise) {
-            tap_code(KC_LEFT);
-        } else {
-            tap_code(KC_RIGHT);
-        }
+    switch (get_highest_layer(layer_state)) {
+        case _BASE:
+            if (index == 0) {
+                if (clockwise) {
+                    tap_code(KC_UP);
+                } else {
+                    tap_code(KC_DOWN);
+                }
+            } 
+            else if (index == 1) {
+                if (clockwise) {
+                    tap_code(KC_LEFT);
+                } else {
+                    tap_code(KC_RIGHT);
+                }
+            }
+            return false;
+        case _RAISE:
+            if (index == 0) {
+                if (clockwise) {
+                    tap_code(KC_VOLU);
+                } else {
+                    tap_code(KC_VOLD);
+                }
+            } 
+            else if (index == 1) {
+                if (clockwise) {
+                    tap_code(KC_LEFT);
+                } else {
+                    tap_code(KC_RIGHT);
+                }
+            }
+            return false;
+        case _LOWER:
+            if (index == 0) {
+                if (clockwise) {
+                    tap_code(KC_UP);
+                } else {
+                    tap_code(KC_DOWN);
+                }
+            } 
+            else if (index == 1) {
+                if (clockwise) {
+                    tap_code(KC_PGUP);
+                } else {
+                    tap_code(KC_PGDN);
+                }
+            }
+            return false;
     }
+    
     return true;
 }
 
